@@ -1,4 +1,6 @@
-# Real-Time BI Pipeline Demo: PostgreSQL → Kafka → Debezium → PostgreSQL
+![Real-Time BI Pipeline Demo](docs/social-preview.png)
+
+# Real-Time BI Pipeline Demo: PostgreSQL → Debezium → Kafka → JDBC Sink → PostgreSQL
 
 A self-contained demo project showing how operational data can be streamed into a BI-ready target database using **PostgreSQL**, **Debezium CDC**, **Kafka in KRaft mode**, **Kafka Connect**, and a **JDBC sink**.
 
