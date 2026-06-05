@@ -1,0 +1,20 @@
+{
+  "name": "postgres-users-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "bi_demo.public.users",
+    "connection.url": "jdbc:postgresql://target-db:5432/targetdb",
+    "connection.user": "targetuser",
+    "connection.password": "targetpass",
+    "auto.create": "true",
+    "auto.evolve": "true",
+    "insert.mode": "upsert",
+    "pk.mode": "record_key",
+    "pk.fields": "user_id",
+    "table.name.format": "users_copy",
+    "delete.enabled": "false",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState"
+  }
+}

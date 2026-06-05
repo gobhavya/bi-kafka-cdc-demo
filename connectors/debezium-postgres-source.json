@@ -1,0 +1,20 @@
+{
+  "name": "postgres-users-source",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "bi_demo",
+    "database.hostname": "source-db",
+    "database.port": "5432",
+    "database.user": "sourceuser",
+    "database.password": "sourcepass",
+    "database.dbname": "sourcedb",
+    "schema.include.list": "public",
+    "table.include.list": "public.users",
+    "slot.name": "bi_demo_users_slot",
+    "publication.name": "bi_demo_publication",
+    "publication.autocreate.mode": "filtered",
+    "tombstones.on.delete": "false"
+  }
+}

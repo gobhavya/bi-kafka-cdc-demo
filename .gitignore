@@ -1,0 +1,13 @@
+# Local runtime files
+.env
+*.log
+
+# Python / OS / IDE
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
+
+# Docker volumes or temp files
+clusterID/
+target/
